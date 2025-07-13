@@ -9,6 +9,10 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
+    viteMockServe({
+      mockPath: 'src/mock', 
+      localEnabled: true,
+    })
   ],
   resolve: {
     alias: {
@@ -18,6 +22,6 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-    host: 'localhost' 
+    host: 'localhost'
   }
 })
